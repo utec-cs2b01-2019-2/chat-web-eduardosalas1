@@ -1,0 +1,105 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        body {
+  margin: 0;
+  padding: 0;
+  background-color: #596673;
+}
+.inner-screen{
+  width: 800px;
+  height: 340px;
+  background: #fff;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+.form{
+  width: 400px;
+  height: 230px;
+  background: #a6998c;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-radius: 20px;
+}
+input[type="text"]{
+  display : block;
+  width: 300px;
+  height: 35px;
+  margin: 15px auto;
+  background: #fff;
+  border: 0px;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+input[type="password"]{
+  display : block;
+  width: 300px;
+  height: 35px;
+  margin: 15px auto;
+  background: #fff;
+  border: 0px;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid #fff;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+input[type="submit"]{
+  display : block;
+  width: 300px;
+  height: 40px;
+  margin: 18px auto;
+  background: #9da1aa;
+  border: 0px;
+  padding: 5px;
+  font-size: 16px;
+  border: 2px solid #000000;
+  transition: all 0.3s ease;
+  border-radius: 5px;
+}
+input[type="text"]:focus{
+  border : 2px solid #1abc9d
+}
+input[type="password"]:focus{
+  border : 2px solid #1abc9d
+}
+input[type="submit"]:hover{
+  background: #404040
+}
+a{
+  text-align: center;
+  font-family: Arial;
+  color: gray;
+  display: block;
+  margin: 15px auto;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-size: 12px;
+}
+
+a:hover{
+  color: #1abc9d;
+  text-decoration: underline;
+}
+    </style>
+    <title></title>
+</head>
+<body>
+<div class="inner-screen" >
+    <div class= "form">
+       <form method="post" action="/login" >
+          <input type="text" name="usuario" placeholder="Enter your username"/>
+          <input type="password" name="password" placeholder="Password"/>
+          <input type="submit" value="Login"/>
+           <a href="http://www.cplusplus.com/doc/tutorial/functions/">Perdiste tu clave?</a>
+       </form>
+    </div>
+</div>
+</body>
+</html>
