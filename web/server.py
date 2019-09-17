@@ -209,6 +209,34 @@ def current_user():
 def logout():
     session.clear()
     return render_template('login.html')
+from flask import Flask, session
+
+#Stateless interaction
+@app.route('/cuantasletras/<nombre>')
+def cuantas_letras(nombre):
+    return str(len(nombre))
+
+#Stateful interaction
+@app.route('/suma/<numero>')
+def suma(numero):
+    if 'suma' not in session:
+        session['suma'] = 0
+
+    suma = session['suma']
+    suma = suma + int(numero)
+    session['suma'] = suma
+    return str(suma)
+
+#Stateful interaction
+@app.route('/login', methods = ['POST'])
+def login():
+    usuario = request.form['usuario']
+    password = request.form['password']
+    if usuario == 'eduardo' and password == '123456':
+        session['usuario'] = usuario
+        return redirect("http://127.0.0.1:8000/static/chatweb.html")
+    else:
+        return "Lo siento " + usuario + " no eres un usuario valido"
 
 if __name__ == '__main__':
     app.secret_key = ".."
